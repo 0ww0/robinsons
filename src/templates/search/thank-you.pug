@@ -1,0 +1,17 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Thank You'
+    - pageClass = 'thank-you'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    link(rel='stylesheet', href = rootBase + 'assets/css/internals/search.min.css')
+        
+block javascript
+
+block content
+    include ../include/partials/search/_thank-you

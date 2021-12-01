@@ -1,0 +1,83 @@
+section.banner-carousel(data-slickjs='bannerCarousel')
+    .banner-item
+        .banner-item-image(style='background-image: url(../assets/images/pages/service/carousel/styleConsultants-landing.jpg);')
+        .container.cont-16
+            .banner-hero
+                table.banner-hero-middle
+                    tbody
+                        tr
+                            td
+                                .brand-hero-title Style Consultants
+                                    span @Robinsons Kuala Lumpur
+                                .brand-hero-subtitle A gift idea, a wardrobe overhaul, a home makeover – we’ll help you find the perfect items for every occasion.
+   
+section.site-section.styleConsultants-section
+    .container.cont-16
+        .open-wrapper
+            .open-heading.txt-center Help us get to know you better, so we can serve you best.
+            .open-subheading.txt-center All fields are compulsory.
+
+
+        .form-container
+            form.styleConsultants-form.clearfix#js-styleConsultants-form(novalidate = 'novalidate')
+                .form-col.left
+                    .form-group.show-error-wrapper
+                        label(for='styleConsultants-your-name') 
+                            strong Your Name
+                        input(type='text' class='form-control' name='styleConsultants-your-name' id='styleConsultants-your-name' placeholder='Your Name')
+                    .form-group.show-error-wrapper
+                        label(for='styleConsultants-gender') 
+                            strong Gender
+                        .custom-radio-wrapper
+                            .custom-radio
+                                input(type='radio' class='form-control' name='styleConsultants-gender' id='styleConsultants-gender-male' value='gender-male') 
+                                label(for='styleConsultants-gender-male') Male
+                            .custom-radio
+                                input(type='radio' class='form-control' name='styleConsultants-gender' id='styleConsultants-gender-female' value='gender-female') 
+                                label(for='styleConsultants-gender-female') Female
+                    .form-group.show-error-wrapper2
+                        label(for='styleConsultants-your-contact') 
+                            strong Your Contact
+                        .input-wrapper
+                            input(type='text' class='form-control styleConsultants-phone' name='styleConsultants-phone' id='styleConsultants-phone' placeholder='Phone No., e.g. 601212345678')
+                            input(type='email' class='form-control styleConsultants-email' name='styleConsultants-email' id='styleConsultants-email' placeholder='Email, e.g. john.smith@email.com')
+                    .form-group.show-error-wrapper
+                        label(for='styleConsultants-date-drop-by') 
+                            strong When would you like to drop by?
+                        input(type="text" class="form-control calender-icon styleConsultants-date" name='styleConsultants-date-drop-by' id="styleConsultants-date-drop-by" placeholder="DD/MM/YYYY" data-input)
+
+                .form-col.right
+                    .form-group.show-error-wrapper
+                        label(for='styleConsultants-describe-current-style') 
+                            strong Describe your current style
+                        textarea(class='form-control' rows="8" id='styleConsultants-describe-current-style' name='styleConsultants-describe-current-style' placeholder='Current Style')
+                    .form-group.show-error-wrapper
+                        label(for='personal-style-consultation') 
+                            strong What are you looking for in this personal style consultation?*
+                        .custom-checkbox-wrapper
+                            .custom-checkbox
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-wardrobe-overhaul' value='wardrobe-overhaul') 
+                                label(for='styleConsultants-wardrobe-overhaul') Wardrobe overhaul
+                            .custom-checkbox
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-finding-seentials' value='finding-seentials') 
+                                label(for='styleConsultants-finding-seentials') Finding essentials
+                            .custom-checkbox
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-events-occasions' value='events-occasions') 
+                                label(for='styleConsultants-events-occasions') Events and occasions
+                            .custom-checkbox
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-try-new-trends' value='try-new-trends') 
+                                label(for='styleConsultants-try-new-trends') Trying new trends
+                            .custom-checkbox
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-clothes-revampp' value='clothes-revampp') 
+                                label(for='styleConsultants-clothes-revampp') Work clothes revamp
+                            .custom-checkbox.other-special
+                                input(type='checkbox' class='form-control' name='personal-style-consultation' id='styleConsultants-others' value='others') 
+                                label(for='styleConsultants-others') Others
+                                input(type='text' class='form-control styleConsultants-others-input' name='styleConsultants-others-input' id='styleConsultants-others-input' placeholder='Others' disabled="disabled")
+
+                .button-wrapper.txt-center
+                    .custom-checkbox.tnc-check.show-error-wrapper2
+                        input(type='checkbox' class='form-control styleConsultants-tnc' name='styleConsultants-tnc' id='styleConsultants-tnc' value='styleConsultants-tnc') 
+                        label(for='styleConsultants-tnc') I have read and agree to the Terms &amp; Conditions of this service.
+                    button.button.submit(type='submit' value='submit')
+                        | Submit

@@ -1,0 +1,18 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Legal & Policies'
+    - breadcrumb = 'terms & conditions'
+    - pageClass = 'legals-policys'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    
+block javascript
+
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/legals-policies/_terms-and-conditions

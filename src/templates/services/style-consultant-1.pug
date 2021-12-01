@@ -1,0 +1,19 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Services'
+    - breadcrumb = 'Style Consultant'
+    - pageClass = 'style-consultant'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    link(rel='stylesheet', href = rootBase + 'assets/css/internals/service.min.css')
+        
+block javascript
+
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/services/_style-consultant-1

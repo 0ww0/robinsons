@@ -1,0 +1,21 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Store'
+    - breadcrumb = 'Robinsons Kuala Lumpur'
+    - pageClass = 'store'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+
+block externals-javascript
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD17rxIfC9QZWnwGPoK9LlkkrNaM0SPX0M&callback=initMap', async, defer)
+        
+block javascript
+		
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/stores/_kuala-lumpur

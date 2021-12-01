@@ -1,0 +1,255 @@
+@import "../include/mixins/vars";
+@import "../include/mixins/mixin";
+
+.career-section{
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 1px #e3e3e3 solid;
+    .decoration-wrapper{
+        position: relative;
+        width: 100%;
+        height: 545px;
+        .deco-01{
+            position: absolute;
+            background-image: url(../../images/pages/about-us/career/career-brief.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include widthPercent(670, 1280);
+            @include responsive-ratio(670, 420);
+            max-width: 670px;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+
+.deco-infogram{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 32%;
+    right: 0;
+    bottom: 0;
+    width: 495px;
+    height: 395px;
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 35px 45px;
+}
+
+.deco-title{
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+}
+
+.deco-flavor{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10px;
+}
+
+.deco-subtitle{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-infogram{
+    position: relative;
+    display: block;
+    width: 90%;
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-top: -45px;
+}
+
+.contact-title{
+    float: left;
+    width: 30%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 6px;
+    border-right: 1px #ddd solid;
+    padding: 8px 0px;
+}
+
+.contact-details{
+    float: left;
+    width: 70%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 2px 0;
+    padding-left: 4%;
+    a{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.contact-heading--wrapper {
+    padding-bottom: 25px;
+
+    .open-heading {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5;
+        color: #646464;
+    }
+}
+
+.contact-infogram-wrapper {
+    position: relative;
+    display: block;
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 20px 30px;
+    margin: 20px 70px 60px;
+    text-align: center;
+
+    @media (max-width: 745px) {
+        margin: 20px auto 100px;
+    }
+
+    .contact-infogram-details{
+        float: left;
+        width: 50%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        padding: 2px 0;
+        
+        &:not(:first-child) {
+            border-left: 2px solid #ededed;
+        }
+
+        @media (max-width: 745px) {
+            width: 100%;
+
+            &:not(:first-child) {
+                border-left: 0;
+                border-top: 2px solid #ededed;
+                padding-top: 10px;
+                margin-top: 10px;
+            }
+        }
+        
+
+        .contactNo {
+            display: block;
+        }
+
+        span {
+            font-size: 20px;
+
+            @media (min-width: 991px) {
+                display: block;
+            }
+
+            @include media(xs-dn) {
+                display: block;
+            }
+        }
+
+        a{
+            text-decoration: underline;
+            font-weight: 500;
+
+            @include media(xs-dn) {
+                display: block;
+            }
+        }
+    }
+}
+
+.career-button{
+    .button{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        letter-spacing: 0;
+        line-height: 1.2;
+        padding: 15px 7px;
+        // cursor: default;
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+.career-info{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    a{
+        text-decoration: underline;
+    }
+}
+
+.career-more{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.open-heading{
+    padding-bottom: 0;
+}
+
+
+@include media(dp-dn){
+    .career-section{
+        .decoration-wrapper{
+            .deco-01{
+                left: -5%;
+            }
+        }
+    }
+    .deco-infogram{
+        left: 34%;
+    }
+}
+
+@include media(md-dn){
+    .career-section{
+        .decoration-wrapper{
+            padding-top: 5%;
+            padding-bottom: 28%;
+            height: auto;
+            .deco-01{
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+    .deco-infogram{
+        position: relative;
+        width: 100%;
+        left: 0;
+        height: auto;
+    }
+}
+
+@include media(sm-dn){
+    .career-section{
+        .decoration-wrapper{
+            padding-top: 10%;
+            padding-bottom: 25%;
+        }
+    }
+}
+
+@include media(xs-dn){
+    .career-section{
+        .decoration-wrapper{
+            padding-bottom: 32%;
+            .deco-01{
+                @include widthPercent(820, 1280);
+            }
+        }
+    }
+}

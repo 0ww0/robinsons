@@ -1,0 +1,107 @@
+@import "../include/mixins/vars";
+@import "../include/mixins/mixin";
+
+.search-section-page {
+    .search-holder-section {
+        .search-input {
+            width: 50%;
+
+            @include media(xs-dn) {
+                width: 90%;
+                margin: 0 8px;
+            }
+        }
+    }
+
+    .search-results-info {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    .search-result-wrapper {
+        padding-top: 30px;
+
+        .title {
+            color: #252525;
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+            padding: 5px 25px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        .content {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        .result-section {
+            &:not(:first-child) {
+                padding-top: 30px;
+            }
+
+            .button {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+
+.error-section-page {
+    text-align: center;
+    padding: 8% 0;
+
+    .title {
+        color: #020202;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 30px;
+    }
+
+    .content {
+        font-family: 'Open Sans', sans-serif;
+        color: #1c1c1c;
+        font-size: 14px;
+    }
+}
+
+
+.thanks-section-page {
+    text-align: center;
+    padding: 8% 0;
+        
+    .title {
+        color: #020202;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 30px;
+    }
+
+    .content {
+        font-family: 'Open Sans', sans-serif;
+        color: #1c1c1c;
+        font-size: 14px;
+
+        &:not(:first-child) {
+            padding-top: 30px;
+        }
+
+        &.content-sub {
+            padding-top: 0;
+            font-size: 16px;
+        }
+
+        @include media(md-up){
+            .noSpace {
+                white-space: nowrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+//- Base Color
+
+$white: #ffffff;
+$black: #000000;
+
+//- Theme Color
+
+// $primary: ;
+// $secondary: ;
+// $tertiary: ;
+// $flavor: ;
+
+$link: #2C3E50;
+$linkHover: #22313F;
+
+$button: #3498db;
+$buttonHover: #2980b9;
+
+$span: #3B3F42;
+$para: #3B3F42;
+
+//- Other Color
+
+$success:     #1abc9c;
+$successDark: #16a085;
+$info:        #f1c40f;
+$infoDark:    #f39c12;
+$warning:     #e67e22;
+$warningDark: #d35400;
+$disabled:    #ecf0f1;
+$danger:      #e74c3c;
+$dangerDark:  #c0392b;
+$inverse:     #34495e;
+$inverseDark: #2c3e50;
+
+//- Fonts -Placeholder
+
+$sans-serif: sans-serif;
+$century-gothic: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+$light: 300;
+$medium: 500;
+$regular: normal;
+$bold: bold;
+$bolder: 900;
+
+$italic: italic;
+
+//- Media Query
+
+$min: min-width;
+$max: max-width;
+
+//- Media Breakdown
+
+$xs: 480px;
+$sm: 640px;
+$md: 800px;
+$dp: 1024px;

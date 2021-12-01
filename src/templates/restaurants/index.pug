@@ -1,0 +1,18 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Restaurants & cafes'
+    - breadcrumb = ''
+    - pageClass = 'restaurants-cafes'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    
+block javascript
+
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/restaurants/_index

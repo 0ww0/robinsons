@@ -1,0 +1,197 @@
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display: block;
+}
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display:table;
+    clear:both;
+    content:'';
+}
+.tab-links li {
+    margin:0px 5px;
+    float:left;
+    list-style:none;
+}
+.tab-links a {
+    padding:9px 15px;
+    border-radius:3px 3px 0px 0px;
+    background:#7FB5DA;
+    font-size:16px;
+    font-weight:600;
+    color:#4c4c4c;
+    transition:all linear 0.15s;
+}
+.tab-links a:hover {
+    background:#a7cce5;
+    text-decoration:none;
+}
+li.active a, li.active a:hover {
+    background:#fff;
+    color:#4c4c4c;
+}
+/*----- Content of Tabs -----*/
+.tab-content {
+    padding:15px;
+    border-radius:3px;
+    background:#fff;
+}
+.tab {
+    display:none;
+}
+.tab.active {
+    display:block;
+}
+
+.store-product-gallery{
+    .tabs{
+        img{
+            display: block;
+            width: 100%;
+        }
+        .tab-links{
+            float: left;
+            width: 27%;
+            li{
+                float: none;
+                width: 100%;
+                opacity: .6;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                padding-right: 16%;
+                &:first-child{
+                    padding-top: 0;
+                    padding-bottom: 6%;
+                }
+                &:last-child{
+                    padding-top: 6%;
+                    padding-bottom: 0;
+                }
+                &.active, &:hover{
+                    opacity: 1;
+                }
+            }
+            a{
+                width: 100%;
+                border-radius: 0;
+                background-color: transparent;
+                padding: 0;
+
+            }
+        }
+        .tab-content{
+            float: left;
+            width: 73%;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+        }
+    }
+}
+
+.brand-tabs{
+    padding: 35px 0;
+    margin: 20px 0;
+    .tab-links{
+        width: 90%;
+        margin: 0 auto;
+        li{
+            margin: 0 0.4%;
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        a{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: transparent;
+            padding: 8px 7px;
+            color: #252525;
+            text-transform: uppercase;
+        }
+    }
+    .tab-content{
+        margin: 10px 0;
+        .brand-header{
+            width: 100%;
+            color: $white;
+            background-color: #000;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .brand-content{
+            width: 100%;
+            p{
+                float: left;
+                width: 25%;
+                padding: 10px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                &:nth-child(4n+1){
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@include media(md-dn){
+    .brand-tabs{
+        .tab-content{
+            .brand-content{
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@include media(sm-dn){
+    .brand-tabs{
+        .tab-content{
+            .brand-content{
+                p{
+                    width: 33.33%;
+                    font-size: 14px;
+                    &:nth-child(4n+1){
+                        clear: unset;
+                    }
+                    &:nth-child(3n+1){
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(xs-dn){
+    .brand-tabs{
+        .tab-content{
+            .brand-content{
+                p{
+                    width: 50%;
+                    font-size: 14px;
+                    &:nth-child(4n+1){
+                        clear: unset;
+                    }
+                    &:nth-child(3n+1){
+                        clear: unset;
+                    }
+                    &:nth-child(2n+1){
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}

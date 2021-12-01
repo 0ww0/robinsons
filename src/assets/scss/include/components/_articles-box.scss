@@ -1,0 +1,252 @@
+.articles-box{
+    font-family: 'Open Sans', sans-serif;
+    color: #646464;
+    line-height: 1.5;
+    img{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.box-images-holder{
+    display: block;
+}
+
+.box-wide-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 45px;
+}
+
+.box-heading{
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.box-subheading{
+    font-size: 16px;
+    padding-bottom: 25px;
+}
+
+.box-gallery{
+    width: 88.5%;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.box-gallery-cell{
+    float: left;
+    &.cell-01{
+        width: 47.5%;
+        padding-right: 5px;
+    }
+    &.cell-02{
+        width: 25.5%;
+        padding-left: 1.5px;
+        padding-right: 1.5px;
+    }
+    &.cell-03{
+        width: 27%;
+        padding-left: 4px;
+    }
+}
+
+@include media(md-dn){
+    .box-heading{
+        font-size: 23px;
+    }
+    .box-subheading{
+        font-size: 14px;
+    }
+    .box-gallery{
+        width: 69.5%;
+    }
+    .box-gallery-cell{
+        &.cell-01{
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 4px;
+        }
+        &.cell-02{
+            width: 48.8%;
+            padding-left: 0;
+            padding-right: 2px;
+        }
+        &.cell-03{
+            width: 51.2%;
+            padding-left: 2px;
+        }
+    }
+}
+
+@include media(xs-dn){
+    .box-wide-container{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .box-heading{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 360px){
+    .box-gallery {
+        width: 80%;
+    }
+}
+
+.box-half-container{
+    display: table;
+    table-layout: fixed;
+    width: 85%;
+    height: 100%;
+    padding: 3% 0;
+    margin: 0 auto;
+}
+
+.box-half-row{
+    display: table-row;
+    &:nth-child(even){
+        .box-images-holder{
+            transform: translateX(100%);
+        }
+        .box-desc{
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.box-half-cell{
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.box-desc{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    .button-wrapper{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.box-desc-title{
+    font-size: 20px;
+    font-family: $century-gothic;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.box-desc-info{
+    font-size: 14px;
+    padding: 0 10%;
+    p,p + p {
+        padding-bottom: 20px;
+    }
+}
+
+
+@include media(md-dn){
+    .box-half-container{
+        width: 100%;
+        display: block;
+    }
+    .box-half-row{
+        display: block;
+        &:nth-child(even){
+            .box-images-holder{
+                transform: none;
+            }
+            .box-desc{
+                transform: none;
+            }
+        }
+    }
+    .box-half-cell{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .box-desc{
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-bottom: 10%;
+    }
+    .box-desc-info{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .box-desc-title{
+        padding-top: 25px;
+        padding-bottom: 4%;
+    }
+}
+
+
+.box-columns{
+    &.box-half-container{
+        width: 87%;
+    }
+    .box-half-row{
+        &:nth-child(even){
+            .box-images-holder{
+                transform: none;
+            }
+            .box-desc{
+                transform: none;
+            }
+        }
+    }
+    .box-half-cell{
+        padding-bottom: 35px;
+        &:nth-child(even){
+            padding-left: 2%;
+        }
+        &:nth-child(odd){
+            padding-right: 2%;
+        }
+    }
+    .box-images-holder{
+        padding-bottom: 25px;
+    }
+    .box-desc{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+
+@include media(md-dn){
+    .box-columns{
+        &.box-half-container{
+            width: 100%;
+        }
+        .box-half-cell{
+            padding-bottom: 0;
+            &:nth-child(even){
+                padding-left: 0;
+            }
+            &:nth-child(odd){
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@include media(xs-dn){
+    .box-columns{
+        .box-desc{
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-bottom: 8%;
+        }
+    }
+}

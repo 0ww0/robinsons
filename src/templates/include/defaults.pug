@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='description', content='Robinsons')
+        meta(name='author', content='Wan Shahz')
+        meta(http-equiv='X-UA-Compatible' content='IE-edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+        block config
+            include config
+        include components/_favicon
+        
+        title #{title} | Robinsons
+        
+        
+        link(rel='stylesheet', href = rootBase + 'assets/css/global.min.css')
+        block stylesheet
+        <!--[if IE 9]>
+            link(rel="stylesheet" href = rootBase + 'assets/css/internals/flatpickr-ie.min.css')
+        <![endif]-->
+
+        noscript
+            style
+                | [data-simplebar] {overflow: auto;}
+                | .simplebar { overflow-y: scroll;}
+                | .simplebar.horizontal { overflow-x: scroll;overflow-y: hidden;}
+                //- /**
+                //- * Reinstate scrolling for non-JS clients
+                //- *
+                //- * You coud do this in a regular stylesheet, but be aware that
+                //- * even in JS-enabled clients the browser scrollbars may be visible
+                //- * briefly until JS kicks in. This is especially noticeable in IE.
+                //- * Wrapping these rules in a noscript tag ensures that never happens.
+                //- */
+                     
+    
+    body
+        include globals/_header
+        main
+            block content
+        include globals/_footer
+
+        script(src= rootBase + 'assets/js/externals/jquery.min.js')
+        script(src= rootBase + 'assets/js/externals/slick.min.js')
+        script(src= rootBase + 'assets/js/externals/jquery.validate.min.js')
+        script(src= rootBase + 'assets/js/externals/simplebar.min.js')
+        script(src= rootBase + 'assets/js/externals/flatpickr.min.js')
+        block externals-javascript
+        script(src= rootBase + 'assets/js/main.min.js')
+        block javascript
+
+    block content-popup

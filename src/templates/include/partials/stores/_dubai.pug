@@ -1,0 +1,37 @@
+
+section.carousel.carousel-stores.bg-carousel-static.carousel-dubai(data-slickjs='mainCarousel')
+    .carousel-item(data-title='Robinsons Dubai')
+        .stores-special.stores-box-global.clearfix
+            .stores-infogram-image-holder
+                img(src= imgPath + 'pages/store/dubai/dubai.jpg')    
+            .stores-infogram.stores-box-global.dubai
+                .stores-wrapper
+                    .stores-title Robinsons
+                    .stores-title DUBAI
+                    .stores-location Dubai Festival City MalL, Ground floor, Level 1 &amp; 2,PO Box 7976, Dubai United Arab Emirates
+                    .stores-hr
+                    .stores-hour Open : 10:30am – 10pm SUN TO WED
+                        br 
+                        | 10am – 12am THU TO SAT
+                    .stores-hr
+                    .stores-contact 
+                        span Email: 
+                        a(href='mailto:customerservice@robinsons.mE') customerservice@robinsons.mE
+                        span  |  
+                        span.tel Tel: + 971 800 67 667
+                    a.button.black(href='#/' data-popup-open='popup-map-dubai') Directions
+                    .stores-visit 
+                        | For more info, visit 
+                        a(href='#') Robinsons.com.me
+    .carousel-dots
+
+section.popup-section
+    .maps-popup.popup(data-popup='popup-map-dubai')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .map-container
+                        .map-wrapper#mapDubai(data-lat='25.223397', data-lng='55.3485186')
+                        #mapDubaiInfo(style='display: none')
+                            div(style='text-align: center') Level 1 &amp; 2,PO Box 7976, Dubai United Arab Emirates
+                    a.popup-close.icon-close(data-popup-close='popup-map-dubai' href='#/')

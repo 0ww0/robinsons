@@ -1,0 +1,57 @@
+@import "../include/mixins/vars";
+@import "../include/mixins/mixin";
+.arrival-holder{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    &:before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border: 18px solid #e8e8e8;
+        top: 0;
+        right: 50%;
+        margin: auto;
+        margin-right: 185px;
+        box-sizing: border-box;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border: 18px solid #e8e8e8;
+        top: 0;
+        left: 50%;
+        margin: auto;
+        margin-left: 185px;
+        box-sizing: border-box;
+    }
+}
+
+@media(min-width: 1201px){
+    .arrival-holder{
+        &:before{
+            margin-right: 193px;
+        }
+        &:after{
+            margin-left: 194px;
+        }
+    }
+}
+
+@include media(xs-dn){
+    .arrival-holder{
+        &:before{
+            display: none;
+        }
+        &:after{
+            display: none;
+        }
+    }
+}

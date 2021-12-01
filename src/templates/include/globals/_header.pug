@@ -1,0 +1,120 @@
+header
+    .brand-header.clearfix
+        .brand-hero
+            a.brand-hero-holder(href= rootBase + 'index.html' target='_self')
+                img(src= imgPath + 'ui/logo.png')
+        .brand-sub#isMobile
+            .search-holder
+                a.navi.search(href='javascript: void(0);')
+                    i.search-icon.icon-search
+                        span.sr-only Search
+            .hamburger-holder
+                a.hamburger-menu.js-hamburger-menu(href='javascript: void(0);')
+                    span.line
+                    span.line
+                    span.line
+                    span.sr-only Toggle Navigation
+    .brand-menu.js-navigation-menu
+        ul.menu
+            li  
+                if (title == 'Brands')
+                    a.navi.active(href= rootBase + 'brands/index.html') Brands
+                else
+                    a.navi(href= rootBase + 'brands/index.html') Brands
+            li.js-dropdown-trigger
+                if (title == 'Store')
+                    a.navi.active(href='javascript: void(0);') Stores
+                        i.navi-icon.icon-down
+                else
+                    a.navi(href='javascript: void(0);') Stores
+                        i.navi-icon.icon-down
+                .brand-submenu.js-dropdown-submenu
+                    ul.submenu
+                        li
+                            a.navi(href= rootBase + 'stores/kuala-lumpur.html') Robinsons Kuala Lumpur
+                        li
+                            a.navi(href= rootBase + 'stores/the-gardens.html') Robinsons The Gardens Mall
+                        li
+                            a.navi(href= rootBase + 'stores/singapore.html') Robinsons Singapore
+                        li
+                            a.navi(href= rootBase + 'stores/dubai.html') Robinsons Dubai
+            li.js-dropdown-trigger
+                if (breadcrumb == 'New Arrivals')
+                    a.navi.active(href='javascript: void(0);') New Arrivals
+                        i.navi-icon.icon-down
+                else
+                    a.navi(href='javascript: void(0);') New Arrivals
+                        i.navi-icon.icon-down
+                .brand-submenu.js-dropdown-submenu
+                    ul.submenu
+                        li
+                            a.navi(href= rootBase + 'store-front/new-arrival.html') Just In Product Pages
+                        li
+                            a.navi(href= rootBase + 'store-front/new-arrival.html') Reserve Product
+            li
+                if (title == 'What\'s Happening')
+                    a.navi.active(href= rootBase + 'whats-happening/index.html') What's Happening
+                else 
+                    a.navi(href= rootBase + 'whats-happening/index.html') What's Happening
+            li.js-dropdown-trigger
+                if (title == 'Services')
+                    a.navi.active(href='javascript: void(0);') Services
+                        i.navi-icon.icon-down
+                else
+                    a.navi(href='javascript: void(0);') Services
+                        i.navi-icon.icon-down
+                .brand-submenu.js-dropdown-submenu
+                    ul.submenu
+                        li
+                            a.navi(href= rootBase + 'services/corporate-gifting.html') Corporate Gifting
+                        li
+                            a.navi(href=rootBase + 'services/membership.html') Membership
+                        li
+                            a.navi(href=rootBase + 'services/returns-exchanges.html') Returns &amp; Exchanges
+            li
+                if (title == 'Style & Fashion')
+                    a.navi.active(href= rootBase + 'style-fashion/index.html') Style &amp; Fashion
+                else
+                    a.navi(href= rootBase + 'style-fashion/index.html') Style &amp; Fashion
+            li.js-dropdown-trigger#isMobile
+                if (title == 'Restaurants & cafes')
+                    a.navi.active(href='javascript: void(0);') Restaurants 
+                        i.navi-icon.icon-down
+                else
+                    a.navi(href= 'javascript: void(0);') Restaurants 
+                        i.navi-icon.icon-down
+                .brand-submenu.js-dropdown-submenu
+                    ul.submenu
+                        li
+                            a.navi(href= rootBase + 'restaurants/index.html') Robinsons Kuala Lumpur
+                        li
+                            a.navi(href= rootBase + 'restaurants/index.html') Robinsons The Gardens Mall
+            li.js-dropdown-trigger#isMobile
+                if (title == 'About Us')
+                    a.navi.active(href='javascript: void(0);') About
+                        i.navi-icon.icon-down
+                else
+                    a.navi(href= 'javascript: void(0);') About
+                        i.navi-icon.icon-down
+                .brand-submenu.js-dropdown-submenu
+                    ul.submenu
+                        li
+                            a.navi(href= rootBase + 'about-us/heritage.html') Heritage
+                        li
+                            a.navi(href= rootBase + 'about-us/career.html') Careers
+                        li
+                            a.navi(href= rootBase + 'about-us/contact-us.html') Contact Us
+            li
+                a.navi.search#isDesktop(href='javascript: void(0);')
+                    i.search-icon.icon-search
+                        span.sr-only Search
+            li#isMobile
+                .socmed-holder
+                    a.socmed.fb(href='#/')
+                    a.socmed.ig(href='#/')
+    .brand-searchbar
+        .container.cont-16
+            .searchbar-wrapper
+                input(type='text' placeholder='Search...')
+                button.button.search(type='submit' value='search')
+                    i.search-icon.icon-search

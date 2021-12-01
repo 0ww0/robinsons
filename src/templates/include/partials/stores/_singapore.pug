@@ -1,0 +1,95 @@
+
+section.carousel.carousel-stores.bg-carousel-static.carousel-singapore(data-slickjs='mainCarousel')
+    .carousel-item(data-title='Robinsons the heeren')
+        .stores-special.stores-box-global.clearfix
+            .stores-infogram-image-holder
+                img(src= imgPath + 'pages/store/singapore/heeren.jpg')    
+            .stores-infogram.stores-box-global.heeren
+                .stores-wrapper
+                    .stores-title Robinsons
+                    .stores-title THE HEEREN
+                    .stores-location 260 Orchard Road Singapore 238855
+                    .stores-hr
+                    .stores-hour Open : 10:30am – 10pm daily
+                    .stores-hr
+                    .stores-contact 
+                        span Email: 
+                        a(href='mailto:orch@robinsons.com.sG') orch@robinsons.com.sG
+                        span  |  
+                        span.tel Tel: +65 6735 8838
+                    a.button.black(href='#/' data-popup-open='popup-1') Directions
+                    .stores-visit 
+                        | For more info, visit 
+                        a(href='https://www.robinsons.com.sg/') Robinsons.com.sg
+    .carousel-item(data-title='robinsons jem')
+        .stores-special.stores-box-global.clearfix
+            .stores-infogram-image-holder
+                img(src= imgPath + 'pages/store/singapore/jem.jpg')
+            .stores-infogram.stores-box-global.jem
+                .stores-wrapper
+                    .stores-title Robinsons Jem
+                    .stores-location 50, Jurong Gateway Road #01-07/13 #[br] Singapore 608549
+                    .stores-hr
+                    .stores-hour Open : 10:30am – 10pm daily
+                    .stores-hr
+                    .stores-contact 
+                        span Email: 
+                        a(href='mailto:orch@robinsons.com.sG') rbjem@robinsons.com.sg
+                        span  |  
+                        span.tel Tel: +65 6887 8838
+                    a.button.black(href='#/' data-popup-open='popup-2') Directions
+                    .stores-visit 
+                        | For more info, visit 
+                        a(href='https://www.robinsons.com.sg/') Robinsons.com.sg
+    .carousel-item(data-title='robinson raffles city')
+        .stores-special.stores-box-global.clearfix
+            .stores-infogram-image-holder
+                img(src= imgPath + 'pages/store/singapore/raffles-city.jpg')
+            .stores-infogram.stores-box-global.raffles-city
+                .stores-wrapper
+                    .stores-title Robinsons
+                    .stores-title RAFFLES CITY
+                    .stores-location 52 North Bridge Rd#03-01 Raffles City Shopping Centre Singapore 179103
+                    .stores-hr
+                    .stores-hour Open : 10:30am – 10pm daily
+                    .stores-hr
+                    .stores-contact 
+                        span Email: 
+                        a(href='mailto:orch@robinsons.com.sG') rccs@robinsons.com.sg
+                        span  |  
+                        span.tel Tel: +65 6216 8388
+                    a.button.black(href='#/' data-popup-open='popup-3') Directions
+                    .stores-visit 
+                        | For more info, visit 
+                        a(href='https://www.robinsons.com.sg/') Robinsons.com.sg
+                
+    .carousel-dots
+
+section.popup-section
+    .maps-popup.popup(data-popup='popup-1')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .map-container
+                        .map-wrapper#mapHeeren(data-lat='1.3023', data-lng='103.8374')
+                        #mapHeerenInfo(style='display: none')
+                            div(style='text-align: center') 260 Orchard Rd, Singapore 238855
+                    a.popup-close.icon-close(data-popup-close='popup-1' href='#/')
+    .maps-popup.popup(data-popup='popup-2')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .map-container
+                        .map-wrapper#mapJem(data-lat='1.3337', data-lng='103.7437')
+                        #mapJemInfo(style='display: none')
+                            div(style='text-align: center') 50 Jurong Gateway Rd, 01-07/13, Singapore 608549
+                    a.popup-close.icon-close(data-popup-close='popup-2' href='#/')
+    .maps-popup.popup(data-popup='popup-3')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .map-container
+                        .map-wrapper#mapRaffles(data-lat='1.29392', data-lng='103.85339')
+                        #mapRafflesInfo(style='display: none')
+                            div(style='text-align: center') 252 North Bridge Rd, Singapore 179103
+                    a.popup-close.icon-close(data-popup-close='popup-3' href='#/')

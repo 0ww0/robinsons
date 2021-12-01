@@ -1,0 +1,155 @@
+.map-section{
+    position: relative;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.map-container{
+    position: relative;
+    @include responsive-ratio(64,25);
+    max-height: 540px;
+}
+
+.map-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.map-infogram{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    margin: auto;
+    margin-right: 110px;
+    width: 450px;
+    height: 350px;
+    background-color: $white;
+    border: 8px #ededed solid;
+    padding: 30px;
+    color: #252525;
+}
+
+.map-title{
+    font-size: 26px;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+}
+
+.map-info{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #646464;
+}
+
+.map-hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px #efefef solid;
+}
+
+.map-flavor{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.map-week{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    padding-bottom: 25px;
+    &:last-child{
+        padding-bottom: 0;
+    }
+    .day{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .first-rate, .sub-rate{
+        font-size: 12px;
+        color: #646464;
+    }
+    .desc{
+        float: left;
+        width: 80%;
+        padding-right: 25px;
+    }
+    .rate{
+        float: left;
+        width: 20%;
+        text-align: right;
+    }
+}
+
+.map-section-scrollbar {
+    .simplebar-holder {
+        height: 175px;
+    }
+    .map-week {
+        padding-right: 15px;
+    }
+}
+
+@media(max-width: 1200px){
+    .map-infogram{
+        right: auto;
+        margin-right: 0;
+        margin-left: 40px;
+    }
+}
+
+@include media(dp-dn){
+    .map-section{
+
+        .container{
+            padding: 0;
+        }
+    }
+    .map-container{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .map-infogram{
+        position: static;
+        width: 50%;
+        height: auto;
+        margin: 0;
+    }
+}
+
+@include media(sm-dn){
+    .map-container{
+        position: relative;
+        width: 100%;
+        min-height: 350px;
+    }
+    .map-infogram{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@include media(xs-dn){
+    .map-section{
+        .container{
+            width: 100%;
+        }
+    }
+    .map-infogram{
+        padding: 20px;
+    }
+    .map-title{
+        font-size: 20px;
+    }
+}

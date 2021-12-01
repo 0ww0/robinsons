@@ -1,0 +1,174 @@
+section.carousel(data-slickjs='mainCarousel')
+    .carousel-item(data-title='')
+        .stores-item-banner(style='background-image: url(../assets/images/pages/store/carousel/garden-landing.jpg);')
+        .stores-infogram
+            .stores-wrapper
+                .stores-title Robinsons
+                .stores-title KUALA LUMPUR
+                .stores-location FOUR SEASONS PLACE, #[br] 145 JALAN AMPANG, 50450 KUALA LUMPUR
+                .stores-hr
+                .stores-hour OPEn : 10am – 10pm daily
+                .stores-hr
+                .stores-contact 
+                    span Email: 
+                    a(href='mailto: FSKL.CS@ROBINSONS.COM.MY')  FSKL.CS@ROBINSONS.COM.MY
+                    span  |  
+                    span.tel Tel: +603-2089 1188
+
+section.site-section
+    .container.cont-16
+        .heading
+            .heading-title.txt-center BRANDS @ ROBINSONS THE GARDENS MALL
+        .brand-wrapper.clearfix
+            .brand-col
+                a(href='#/')
+                    .brand-image
+                        img(src=  imgPath + 'pages/brand/brand-logo/baroque.jpg')
+            .brand-col
+                a(href='#/')
+                    .brand-image
+                        img(src=  imgPath + 'pages/brand/brand-logo/coach.jpg')
+            .brand-col
+                a(href='#/')
+                    .brand-image
+                        img(src=  imgPath + 'pages/brand/brand-logo/oakley.jpg')
+            .brand-col
+                a(href='#/')
+                    .brand-image
+                        img(src=  imgPath + 'pages/brand/brand-logo/emporio-armani.jpg')
+            .brand-col
+                a(href='#/')
+                    .brand-image
+                        img(src=  imgPath + 'pages/brand/brand-logo/tiffany-co.jpg')
+        .button-wrapper.txt-center
+            a.button.black(href='#/') See All Brands
+
+
+section.site-section
+    .container.cont-16
+        .heading
+            .heading-title.txt-center MORE @ ROBINSONs
+        .articles-wrapper.clearfix(data-row-equaliser='.articles-title, .articles-main')
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/post/img-01.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center O’COFFEE CLUB
+                    .articles-main
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nulla diam, a vestibulum justo iaculis ac.
+                    a.button.black(href='#/', data-popup-open='popup-store') Find Out More
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/post/img-02.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center SERVICE OFFERED 2
+                    .articles-main
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    a.button.black(href='#/', data-popup-open='popup-store-2') Find Out More
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/post/img-03.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center new stores on the block
+                    .articles-main
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nulla diam, a vestibulum justo iaculis ac.
+                    a.button.black(href='#/') Find Out More
+                    
+section.site-section.map-section.clearfix.map-section-scrollbar
+    .map-container
+        .map-wrapper#mapGardens(data-lat='3.1188162', data-lng='101.67601309999998')
+        #mapGardensInfo(style='display: none')
+            div(style='text-align: center') The Gardens, L1-2, Lingkaran Syed Putra, #[br] Mid Valley City, 59200 Kuala Lumpur, #[br] Federal Territory of Kuala Lumpur
+    .map-infogram
+        .map-title DRIVING THERE
+        .map-hr
+        .map-flavor Parking Rates:
+        .simplebar-holder(data-simplebar='init', data-simplebar-autohide='false')
+            .map-week.clearfix
+                .day Mondays to Fridays
+                .first-rate
+                    .desc First hours or part thereof
+                    .rate RM5
+                .sub-rate
+                    .desc Every subsequent hour or part thereof 
+                    .rate RM4
+                .sub-rate
+                    .desc Entry between 5pm and 5am
+                    .rate RM17 max
+                .sub-rate
+                    .desc Motorcycles
+                    .rate RM2/ent.
+            .map-week.clearfix
+                .day Saturdays
+                .first-rate 
+                    .desc Before 12 noon 
+                    .desc First hour or part thereof 
+                    .rate RM5
+                .sub-rate
+                    .desc Every subsequent hour or part thereof 
+                    .rate RM4 #[br]#[br]
+                .first-rate
+                    .desc After 12 noon
+                    .desc First hour or part thereof
+                    .rate RM6
+                .sub-rate
+                    .desc Every subsequent hour or part thereof
+                    .rate RM4
+                .sub-rate
+                    .desc Exit after 12 midnight (chargeable in addition to above rates)
+                    .rate RM12
+                .sub-rate
+                    .desc Motorcycles
+                    .rate RM2/ent.
+            .map-week.clearfix
+                .day SUNDAYS AND PUBLIC HOLIDAYS
+                .first-rate
+                    .desc First 3 hours or part thereof
+                    .rate RM5
+                .sub-rate
+                    .desc Every subsequent hour or part thereof
+                    .rate RM4
+                .sub-rate
+                    .desc Exit after 12 midnight (chargeable in addition to above rates)
+                    .rate RM12
+                .sub-rate
+                    .desc Motorcycles
+                    .rate RM2/ent.
+section.popup-section
+    .offers-popup.popup(data-popup='popup-1')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .offers-logo-holder
+                        img(src= imgPath + 'ui/offers-logo.png')
+                    .offers-images-holder
+                        img(src= imgPath + 'pages/event/img-01.jpg')
+                    a.popup-close.icon-close(data-popup-close='popup-1' href='#/')
+    .store-popup.popup.clearfix(data-popup='popup-store')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .store-col
+                        .store-row
+                            .store-cell.col-01.bg-holder.bg-desktop(style='background-image:url(../assets/images/pages/store/the-gardens/img-01.jpg)')
+                                .info-holder
+                                    .store-name O’COFFEE CLUB
+                            .store-cell.col-02
+                                .info-holder.simplebar-holder
+                                    .store-info(data-simplebar='init', data-simplebar-autohide="false")
+                                        .info-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas sem ipsum, vel rhoncus diam gravida posuere. Etiam eu commodo sem. Phasellus bibendum nec felis convallis lacinia. Etiam eu commodo sem. Phasellus bibendum nec felis convallis lacinia. Etiam eu commodo sem. Phasellus bibendum nec felis convallis lacinia. Etiam eu commodo sem. Phasellus bibendum nec felis convallis lacinia. 
+                    a.popup-close.icon-close(data-popup-close='popup-store' href='#/')
+    .store-popup.popup.clearfix(data-popup='popup-store-2')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .store-col
+                        .store-row
+                            .store-cell.col-01.bg-holder.bg-desktop(style='background-image:url(../assets/images/pages/store/the-gardens/img-02.jpg)')
+                                .info-holder
+                                    .store-name SERVICE OFFERED 2
+                            .store-cell.col-02
+                                .info-holder.simplebar-holder
+                                    .store-info(data-simplebar='init', data-simplebar-autohide="false")
+                                        .info-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas sem ipsum, vel rhoncus diam gravida posuere. Etiam eu commodo sem. Phasellus bibendum nec felis convallis lacinia. Etiam eu commodo sem.
+                    a.popup-close.icon-close(data-popup-close='popup-store-2' href='#/')

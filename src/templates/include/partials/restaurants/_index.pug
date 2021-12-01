@@ -1,0 +1,77 @@
+section.site-section.offers-event.restaurants.clearfix(data-row-equaliser='.offers-col')
+    .container.cont-16
+        .whats-happening-details
+            .offers-col.vertical-middle
+                .offers-heading RESTAURANTs @ ROBINSONS
+                .dropdown
+                    i.caret-dropdown.icon-dropdown
+                    select.dropdown-control
+                        option Robinsons Kuala Lumpur
+                        option Robinsons The Gardens
+        .whats-happening-carousel
+            .offers-col.offers-carousel(data-slickjs='offersCarousel' data-row-equaliser='.offers-holder')
+                .offers-item
+                    .offers-holder.vertical-middle
+                        .restaurants-infogram
+                            .restaurants-images-holder
+                                img(src= imgPath + 'pages/restaurants/img-01.jpg')
+                            .restaurants-holder
+                                .restaurants-name.vertical-middle
+                                    | Bora Bora Cafe
+                                .restaurants-info
+                                    | Restaurant write-up lorem ipsum is just another placeholder and will be replaced...
+                                a.button.black(href='#/' data-popup-open='popup-1') More info
+                .offers-item
+                    .offers-holder.vertical-middle
+                        .restaurants-infogram
+                            .restaurants-images-holder
+                                img(src= imgPath + 'pages/restaurants/img-02.jpg')
+                            .restaurants-holder
+                                .restaurants-name.vertical-middle
+                                    | Al-Cerdio Italian Specialist Cafe
+                                .restaurants-info
+                                    | Restaurant write-up lorem ipsum is just another placeholder and will be replaced...
+                                a.button.black(href='#/') More info
+                .offers-item
+                    .offers-holder.vertical-middle
+                        .restaurants-infogram
+                            .restaurants-images-holder
+                                img(src= imgPath + 'pages/restaurants/img-01.jpg')
+                            .restaurants-holder
+                                .restaurants-name.vertical-middle
+                                    | Bora Bora Cafe
+                                .restaurants-info
+                                    | Restaurant write-up lorem ipsum is just another placeholder and will be replaced...
+                                a.button.black(href='#/') More info
+            .offers-dots
+section.popup-section
+    .restaurants-popup.popup.clearfix(data-popup='popup-1')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .restaurants-col
+                        .restaurants-row
+                            .restaurants-cell.col-01.bg-holder.bg-desktop(style='background-image:url(../assets/images/pages/restaurants/img-01.jpg)')
+                                .info-holder
+                                    .restaurants-name Bora - Bora Cafe
+                                    .restaurants-desc
+                                        i.icon-wrapper.icon-pin
+                                        span G1-LOT A - 15, 17
+                                    .restaurants-desc
+                                        i.icon-wrapper.icon-phone
+                                        span +603 123 4567
+                                    .restaurants-desc
+                                        i.icon-wrapper.icon-web
+                                        span www.borabora.com.my
+                            .restaurants-cell.col-02
+                                .info-holder
+                                    .restaurants-info Restaurant write-up lorem ipsum is just another placeholder and will be replaced by actual content once available.
+                                    .restaurants-deals.clearfix
+                                        .percent
+                                            .number 10
+                                            .symbol
+                                                .sm %
+                                                .of OFF
+                                        .deal
+                                            | On a la carte drinks with your Robinsons member card
+                    a.popup-close.icon-close(data-popup-close='popup-1' href='#/')

@@ -1,0 +1,80 @@
+/******************************************************************************/
+/*                                                                            */
+/*                            NOTE: External                                  */
+/*                                                                            */
+/******************************************************************************/
+
+/*************************  Normalize Start  **********************************/
+
+@import "include/components/fonts";
+@import "include/externals/normalize/import-now";
+@import "include/externals/slick";
+@import "include/externals/simplebar";
+@import "include/externals/flatpickr";
+
+/***************************  Normalize End  **********************************/
+
+/******************************************************************************/
+/*                                                                            */
+/*                            NOTE: Mixin                                     */
+/*                                                                            */
+/******************************************************************************/
+
+@import "include/mixins/vars";
+@import "include/mixins/mixin";
+
+/******************************************************************************/
+/*                                                                            */
+/*                            NOTE: Global                                    */
+/*                                                                            */
+/******************************************************************************/
+
+/*******************************  General Start  *******************************/
+
+@import "include/globals/_general";
+
+/********************************  General End  ********************************/
+
+/********************************  Header Start  *******************************/
+
+@import "include/globals/_header";
+
+/******************************** Header End  **********************************/
+
+/*******************************  Footer Start  ********************************/
+
+@import "include/globals/_footer";
+
+/*******************************  Footer End  **********************************/
+
+/******************************************************************************/
+/*                                                                            */
+/*                            NOTE: components                                */
+/*                                                                            */
+/******************************************************************************/
+
+
+
+@import "include/components/grid";
+@import "include/components/button";
+@import "include/components/carousel";
+@import "include/components/carousel-details";
+@import "include/components/gallery";
+@import "include/components/brand";
+@import "include/components/breadcrumb";
+@import "include/components/side-footer";
+@import "include/components/articles";
+@import "include/components/map";
+@import "include/components/dropdown";
+@import "include/components/typography";
+@import "include/components/articles-box";
+@import "include/components/form";
+@import "include/components/main-store";
+@import "include/components/accordion";
+@import "include/components/popup";
+@import "include/components/tabs";
+@import "include/components/pagination";
+@import "include/components/list-style";
+@import "include/components/checked_box";
+@import "include/components/checked_radio";
+

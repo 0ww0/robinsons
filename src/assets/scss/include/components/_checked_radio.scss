@@ -1,0 +1,111 @@
+/*-----------------------------------------------------------------------------
+    radio
+-----------------------------------------------------------------------------*/
+.custom-radio > [type="radio"],
+.custom-radio > label{
+	margin-bottom:0px !important;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.custom-radio > [type="radio"]:not(:checked),
+.custom-radio > [type="radio"]:checked {
+	position: absolute;
+	left: -9999px;
+}
+.custom-radio > [type="radio"]:not(:checked) + label,
+.custom-radio > [type="radio"]:checked + label {
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	color: #000;
+	font-size: 14px;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+.custom-radio > [type="radio"]:not(:checked) + label:before,
+.custom-radio > [type="radio"]:checked + label:before {
+	content: '';
+	position: absolute;
+	left:0; 
+	top: 50%;
+	margin-top:-12px;
+	width: 16px; 
+	height: 16px;
+	border: 1px solid #000;
+	border-radius: 50%; 
+	background: #fff;
+}
+.custom-radio > [type="radio"]:not(:checked) + label:after,
+.custom-radio > [type="radio"]:checked + label:after {
+	font: normal normal normal 14px/1 'Helvetica, Arial, sans-serif';
+	content: '';
+	position: absolute;
+	top: 50%;
+    margin-top: -7px;
+    left: 5px;
+	background: #000;
+	transition: all 0.2s;
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+}
+
+.custom-radio > [type="radio"]:not(:checked) + label:after {
+	opacity: 0;
+	transform: scale(0);
+}
+.custom-radio > [type="radio"]:checked + label:after {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.custom-radio > [type="radio"][data-indeterminate] + label:after,
+.custom-radio > [type="radio"][data-indeterminate] + label:after {
+	content: '\f068';
+	left: 6px;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.custom-radio > [type="radio"]:disabled:not(:checked) + label:before,
+.custom-radio > [type="radio"]:disabled:checked + label:before {
+  	box-shadow: none;
+  	background-color: #eeeeee;
+	border-color: #eeeeee;
+	cursor: not-allowed;
+	opacity: 1;
+	color: #dadada;
+}
+.custom-radio > [type="radio"]:disabled:checked + label:after {
+  color: #dadada; cursor: not-allowed;
+}
+.custom-radio > [type="radio"]:disabled + label {
+  color: #aaa; cursor: not-allowed;
+}
+.custom-radio > [type="radio"]:checked:focus + label:before,
+.custom-radio > [type="radio"]:not(:checked):focus + label:before {
+	border: 1px solid #000;
+    // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 153, 0.6);
+}
+.custom-radio > label:hover:before {
+	border: 1px solid #000 !important;
+}
+.custom-radio > [type="radio"]:disabled:not(:checked) + label:hover:before,
+.custom-radio > [type="radio"]:disabled:checked + label:hover:before{
+	border: 1px solid #000 !important;
+}
+
+.has-error .custom-radio > [type="radio"]:not(:checked) + label:before,
+.has-error .custom-radio > [type="radio"]:checked + label:before {
+	border: 1px solid red;
+}
+
+.has-success .custom-radio > [type="radio"]:not(:checked) + label:before,
+.has-success .custom-radio > [type="radio"]:checked + label:before {
+	border: 1px solid #000;
+}
+

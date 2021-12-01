@@ -1,0 +1,28 @@
+section.side-footer.clearfix(data-row-equaliser='.side-content')
+    .container.cont-16
+        .side-col
+            .side-content.side-left.vertical-middle
+                    .side-image-holder
+                        img(src= imgPath + 'ui/footer/visit.png' )
+                    .side-description
+                        .side-title Visit Our Retail Outlets Today!
+                        a.side-link(href='#/') More Info
+        .side-col
+            .side-content.vertical-middle
+                .side-image-holder
+                    img(src= imgPath + 'ui/footer/small-logo.png' )
+                .side-description
+                    .side-title EARN REBATES OF UP TO 10% & MORE
+                    a.side-link(href='#/') Apply Now
+        .side-col.socmed-mod
+            .side-content.side-right.vertical-middle
+                .side-socmed.clearfix
+                    .socmed-title
+                        span Get news &amp; updates
+                    .socmed-holder
+                        a.socmed.fb(href='#/')
+                        a.socmed.ig(href='#/')
+                .form-group
+                    input(type='text' placeholder='Enter Email Address' class='form-control update' name='update' id='update')
+                    button.button.update(type='submit' value='submit')
+                        | Go

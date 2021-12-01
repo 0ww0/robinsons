@@ -1,0 +1,19 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'About Us'
+    - breadcrumb = 'Careers'
+    - pageClass = 'about-us'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    link(rel='stylesheet', href = rootBase + 'assets/css/internals/about-us.min.css')
+
+block javascript
+
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/about-us/_career

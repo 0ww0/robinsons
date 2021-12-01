@@ -1,0 +1,187 @@
+.side-footer{
+    position: relative;
+    display: block;
+    border-top: 1px #e3e3e3 solid;
+    img{
+        display: block;
+    }
+}
+
+.side-col{
+    float: left;
+    width: 33.33%;
+    border-right: 1px #e3e3e3 solid;
+    &:last-child{
+        border-right: 0;
+    }
+}
+
+.side-content{
+    width: 33.33%;
+    padding: 5% 6%;
+}
+
+@include media(dp-up){
+    .side-content{
+        &.side-left{
+            text-align: right;
+            .side-description{
+                width: 55%;
+                text-align: left;
+            }
+        }
+        &.side-right{
+            padding-left: 8%;
+            text-align: left;
+            .side-socmed{
+                width: 80%;
+            }
+            .form-group{
+                width: 80%;
+            }
+        }
+    }
+}
+
+.side-socmed{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0;
+    width: 100%;
+    span{
+        width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+        padding-right: 10px;
+        text-transform: uppercase;
+    }
+    .socmed-title{
+        float: left;
+        width: 60%;
+        max-height: 33px;
+        span{
+            display: table-cell;
+            height: 33px;
+        }
+    }
+    .socmed-holder{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 40%;
+        text-align: right;
+    }
+    .socmed{
+        background-image: url(../images/ui/footer/socmed.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        max-width: 34.5px;
+        @include responsive-ratio(34.5,33);
+        &.fb{
+            background-position: left;
+        }
+        &.ig{
+            background-position: 104%;
+        }
+    }
+}
+
+.side-image-holder{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.side-description{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    color: #252525;
+    text-transform: uppercase;
+    width: calc(100% - 98px - 4%);
+    padding-left: 0;
+    .side-title{
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    a.side-link{
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding: 5px 0;
+    }
+}
+
+@include media(dp-dn){
+    .side-description{
+        text-align: left;
+    }
+    .side-image-holder{
+        width: auto;
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+
+@include media(md-dn){
+    .side-col{
+        float: left;
+        width: 50%;
+        border-right: 1px #e3e3e3 solid;
+        border-bottom: 1px #e3e3e3 solid;
+        &:nth-child(2){
+            border-right: 0;
+        }
+        &:last-child{
+            border-right: 0;
+            border-bottom: 0;
+        }
+        &.socmed-mod{
+            width: 100%;
+            clear: left;
+        }
+    }
+    .side-content{
+        width: 40%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .side-description{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+}
+
+
+@include media(xs-dn){
+    .side-col{
+        float: left;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px #e3e3e3 solid;
+        &:last-child{
+            border-right: 0;
+            border-bottom: 0;
+        }
+        &.socmed-mod{
+            width: 100%;
+        }
+    }
+}
+
+
+@media(max-width: 360px){
+    .side-description{
+        .side-title{
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+    }
+}

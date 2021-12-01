@@ -1,0 +1,845 @@
+/*-----------------------------------------------------------------------------
+    Carousels
+-----------------------------------------------------------------------------*/
+
+/*---- Override some Slick defaults ----*/
+
+.slick-arrow {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    background: none;
+    top: 50%;
+    z-index: 1;
+    margin-top: -16px;
+    background-size: auto 32px;
+    text-indent: 100px;
+    overflow: hidden;
+    opacity: .9;
+    cursor: pointer;
+}
+.slick-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    background-position: right center;
+    right: 0;
+}
+
+.slick-dots {
+    &,
+    > li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    > li {
+        display: inline-block;
+
+        > button {
+            border: 0;
+            padding: 3px;
+            outline: 0;
+            position: relative;
+            background: none;
+            color: transparent;
+            appearance: none;
+
+            &:before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                display: block;
+                background-color: #dbdbdb;
+            }
+        }
+    }
+
+    > .slick-active > button:before {
+        background-color: $black;
+    }
+// End .slick-dots
+}
+
+@include media(xs-up) {
+    .slick-arrow {
+        width: 65px;
+        height: 65px;
+        margin-top: -32px;
+        background-size: auto;
+    }
+}
+
+/*---- Actual carousel styling ----*/
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    outline: 0;
+    .slick-arrow{
+        width: 17px;
+        height: 28px;
+        background: url(../images/ui/carousels/arrows.png) left center no-repeat;
+        background-size: auto 28px;
+    }
+    .slick-prev {
+        left: 0;
+        margin-left: 100px;
+    }
+    .slick-next {
+        background-position: right center;
+        right: 0;
+        margin-right: 100px;
+    }
+
+    &.slick-initialized {
+        padding-bottom: 30px;
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+
+
+.bg-carousel-static {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.carousel.carousel-stores{
+    .slick-prev {
+        margin-left: 65px;
+    }
+    .slick-next {
+        margin-right: 65px;
+    }
+}
+    .carousel-dots {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    .carousel-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+
+        &:first-child {
+            display: block;
+        }
+    }
+    .carousel.slick-initialized .carousel-item {
+        display: block;
+    }
+        .carousel-item-banner {
+            background: center no-repeat;
+            background-size: 100%;
+            &.banner-desktop{
+                @include responsive-ratio(128,45);
+                display: block;
+            }
+            &.banner-mobile{
+                @include responsive-ratio(64,65);
+                display: none;
+            }
+        }
+
+
+
+
+@include media(dp-dn) {
+    .carousel-item-banner {
+        background-size: cover;
+    }
+    .stores-infogram{
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        min-height: 100%;
+    }
+    .carousel{
+        .slick-prev {
+            margin-left: 50px;
+        }
+        .slick-next {
+            margin-right: 50px;
+        }
+    }
+    .carousel.carousel-stores{
+        .slick-prev {
+            margin-left: 20px;
+        }
+        .slick-next {
+            margin-right: 20px;
+        }
+    }
+}
+
+@include media(md-dn){
+    .carousel-item-banner {
+        &.banner-desktop{
+            @include responsive-ratio(80,40);
+            display: block;
+        }
+    }
+}
+
+@include media(sm-dn){
+    .bg-carousel-static{
+        background-size: cover;
+        background-position: top;
+    }
+    .carousel-item-banner {
+        background: center no-repeat;
+        background-size: 100%;
+        &.banner-desktop{
+            display: none;
+        }
+        &.banner-mobile{
+            display: block;
+        }
+    }
+    .carousel-dots > .slick-dots {
+        display: none !important;
+    }
+}
+
+@include media(xs-dn){
+    .carousel{
+        .slick-prev {
+            margin-left: 15px;
+        }
+        .slick-next {
+            margin-right: 15px;
+        }
+    }
+    .carousel.carousel-stores{
+        .slick-prev {
+            margin-left: 10px;
+        }
+        .slick-next {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+@media (min-width: 1201px) {
+    .carousel-item-banner {
+        background-size: cover;
+    }
+    .stores-item-banner {
+        background-size: cover;
+    }
+}
+
+
+
+@include media(sm-up) {
+    .carousel-dots:before {
+        content: '';
+        width: 100%;
+        height: 38px;
+        background-color: $white;
+        border-top: 6px #ededed solid;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .carousel-dots:after{
+        content: '';
+        border-bottom: 1px #ededed solid;
+        width: 100%;
+        height: 2px;
+        display: block;
+        margin: 0 auto 0;
+        position: relative;
+    }
+    .carousel-dots > .slick-dots {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+        font-size: 10px;
+    }
+    .carousel-dots .slick-dots {
+        > li {
+            cursor: pointer;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            &:hover{
+                > button{
+                    color: #252525;
+                }
+            }
+            &.slick-active{
+                border-top: 6px #252525 solid;
+                > button {
+                    color: #252525;
+                }
+            }
+        }
+        > li > button {
+            padding: 0;
+            margin: 0 3px;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #acacac;
+            pointer-events: none;
+            letter-spacing: 2px;
+            &:before {
+                width: 0;
+                height: 0;
+                top: 0;
+                left: 0;
+                margin-left: 0;
+                background: transparent;
+                opacity: 0;
+            }
+        }
+        > .slick-active > button:before {
+            background: none;
+            opacity: 1;
+        }
+    // End .carousel-dots .slick-dots
+    }
+// End media(sm-up)
+}
+
+@include media(md-up) {
+    .carousel .slick-arrow {
+        display: block !important;
+    }
+    .carousel-dots > .slick-dots {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 0 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.carousel{
+    &.slick-initialized {
+        padding-bottom: 0 !important;
+    }
+}
+
+
+
+/*---- Actual  Arrival carousel styling ----*/
+.arrival-holder{
+    .container{
+        padding: 0;
+    }
+}
+.arrival-dots{
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    top: 45px;
+}
+.arrival-carousel {
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    margin: 0 auto;
+    text-align: center;
+    outline: 0;
+    .arrival-wrapper{
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .slick-arrow{
+        width: 9px;
+        height: 16px;
+        top: initial;
+        bottom: 1px;
+        background: url(../images/ui/carousels/arrows.png) left center no-repeat;
+        background-size: auto 16px;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        background-position: right center;
+        right: 0;
+    }
+    .slick-list{
+        overflow: visible !important;
+    }
+    .slick-dots{
+        li > button{
+            font-size: 0;
+            line-height: 1;
+        }
+    }
+
+    &.slick-initialized {
+        padding-bottom: 75px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+    .arrival-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+        width: calc(33.33% - 20px);
+        &:first-child {
+            display: block;
+        }
+        &:nth-child(2){
+            display: block;
+        }
+        &:nth-child(3){
+            display: block;
+        }
+    }
+    .carousel.slick-initialized .arrival-item {
+        display: block;
+    }
+        .arrival-item-product {
+            background: center no-repeat;
+            background-size: cover;
+            @include responsive-ratio(320,233);
+        }
+
+
+@media(max-width: 1200px){
+    .arrival-carousel {
+        .arrival-wrapper{
+            width: 450px;
+        }
+    }
+}
+
+@include media(md-dn){
+    .arrival-dots{
+        top: 35px;
+    }
+}
+@include media(sm-up) {
+
+    .carousel.slick-initialized {
+        padding-bottom: 65px;
+    }
+}
+
+@include media(sm-dn){
+    .arrival-dots{
+        top: 30px;
+    }
+}
+@include media(xs-dn){
+    .arrival-holder{
+        .container{
+            width: 100%;
+        }
+    }
+    .arrival-carousel {
+        .arrival-wrapper{
+            width: 100%;
+        }
+    }
+}
+
+/*---- Actual  Arrival carousel styling ----*/
+
+/*---- Actual  In Store carousel styling ----*/
+
+.instore-carousel {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    width: 65%;
+    margin: 0 auto;
+    .slick-arrow{
+        width: 50px;
+        height: 50px;
+        background: url(../images/ui/carousels/box-white-arrow.png) left center no-repeat;
+        background-size: auto 100%;
+        transition: all 300ms ease-in;
+
+        &:hover {
+            background: url(../images/ui/carousels/box-black-white-arrow.png) left center no-repeat;
+        }
+    }
+    .slick-prev {
+        top: 50%;
+        margin-top: -50px;
+        left: 0;
+        margin-left: 50px;
+    }
+    .slick-next {
+        top: 50%;
+        margin-top: -50px;
+        background-position: right center;
+        right: 0;
+        margin-right: 50px;
+        transform: rotate(180deg);
+    }
+    .slick-dots{
+        text-align: center;
+        margin-bottom: -25px;
+    }
+
+    &.slick-initialized {
+        padding-bottom: 30px;
+        width: 100%;
+        margin: 0;
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+    .instore-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+        width: calc(33.33% - 20px);
+        &:first-child {
+            display: block;
+        }
+        &:nth-child(2),&:nth-child(3){
+            display: block;
+        }
+    }
+    .carousel.slick-initialized .instore-item {
+        display: block;
+    }
+        .instore-item-suprise {
+            background: center no-repeat;
+            background-size: cover;
+            @include responsive-ratio(4,3);
+        }
+
+
+@include media(sm-up) {
+    .carousel.slick-initialized {
+        padding-bottom: 35px;
+    }
+}
+
+@include media(md-up) {
+    .carousel .slick-arrow {
+        display: block !important;
+    }
+}
+
+/*---- Actual  In Store carousel styling ----*/
+
+/*---- Actual  Banner carousel styling ----*/
+
+.banner-carousel {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+
+    &.slick-initialized {
+        padding-bottom: 30px;
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+    .banner-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+        &:first-child {
+            display: block;
+        }
+    }
+    .carousel.slick-initialized .banner-item {
+        display: block;
+    }
+
+@include media(md-dn) {
+    .banner-item{
+        .container{
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+}
+/*---- Actual  Arrival carousel styling ----*/
+
+/*---- Actual  Banner carousel styling ----*/
+.store-events{
+    position: relative;
+    display: block;
+    background-image: url(../images/pages/store/the-gardens/events-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.store-event-carousel {
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    .slick-arrow{
+        width: 17px;
+        height: 28px;
+        background: url(../images/ui/carousels/arrows.png) left center no-repeat;
+        background-size: auto 28px;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        background-position: right center;
+        right: 0;
+    }
+    .slick-dots {
+        text-align: center;
+        margin-bottom: -25px;
+        > li {
+            > button {
+                &:before {
+                    background-color: $white;
+                }
+            }
+        }
+        > .slick-active > button:before {
+            background-color: $black;
+        }
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+
+.stores-item-banner{
+    background: top no-repeat;
+    background-size: 100%;
+    @include responsive-ratio(640, 279);
+    max-height: 680px;
+}
+
+
+
+    .event-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+        &:first-child {
+            display: block;
+        }
+            .event-holder{
+                min-height: 400px;
+            }
+    }
+    .carousel.slick-initialized .event-item {
+        display: block;
+    }
+
+@include media(sm-dn){
+    .stores-item-banner{
+        @include responsive-ratio(1360, 900);
+        background: center no-repeat;
+        max-height: 1360px;
+        background-size: cover;
+    }
+}
+
+
+/*---- Actual  Arrival carousel styling ----*/
+
+/*---- Actual  Banner carousel styling ----*/
+.offers-event{
+    position: relative;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    &.whats-happening{
+        background-image: url(../images/pages/whats-happening/bg.jpg);
+    }
+    &.restaurants{
+        background-image: url(../images/pages/restaurants/bg.jpg);
+    }
+}
+
+.offers-dots{
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    text-align: center;
+    .slick-arrow{
+        width: 9px;
+        height: 16px;
+        background: url(../images/ui/carousels/arrows.png) left center no-repeat;
+        background-size: auto 16px;
+        top: auto;
+        bottom: 1px;
+    }
+    .slick-prev {
+        left: 0%;
+    }
+    .slick-next {
+        background-position: right center;
+        right: 0%;
+    }
+    .slick-dots{
+        text-align: center;
+        margin-top: 8px;
+        > li {
+            > button {
+                font-size: 0;
+                line-height: 1;
+                &:before {
+                    background-color: $white;
+                }
+            }
+        }
+        > .slick-active > button:before {
+            background-color: $black;
+        }
+    }
+}
+.offers-carousel {
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    margin: 0 auto;
+    text-align: center;
+
+
+    &.slick-initialized {
+        width: 100%;
+        margin: 0;
+    }
+
+    img {
+        // Slick sets images in the carousel to be block. It conflicts with
+        // us using images in the carousel, so revert it.
+        display: inline-block;
+    }
+}
+    .offers-item {
+        position: relative;
+        display: none;
+        outline: 0; // Prevent focus effect that's dynamically added by Slick
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+        width: calc(50% - 20px);
+        &:first-child {
+            display: block;
+        }
+        &:nth-child(2){
+            display: block;
+        }
+    }
+    .offers-holder{
+        padding: 15px 5px;
+    }
+    .carousel.slick-initialized .offers-item {
+        display: block;
+    }
+
+.restaurants{
+    .offers-item.one{
+        width: 100%;
+        max-width: 318px;
+        margin: 0 auto;
+    }
+}
+
+
+
+.whats-happening{
+    .offers-item.one{
+        width: 100%;
+        max-width: 318px;
+        margin: 0 auto;
+    }
+}
+
+
+@include media(xs-dn){
+    .offers-carousel{
+        &.slick-initialized {
+            .offers-item {
+                &:nth-child(2){
+                    display: block;
+                }
+            }
+        }
+    }
+    .offers-item {
+        width: calc(100% - 20px);
+        &:nth-child(2){
+            display: none;
+        }
+    }
+    .whats-happening{
+        .offers-item.one{
+            width: 100%;
+            max-width: 275px;
+        }
+    }
+}
+
+
+
+@include media(xs-up){
+    .offers-event .offers-carousel {
+        .offers-item {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+}
+
+.slick-initialized.offers-carousel {
+    .offers-item {
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+    }
+}

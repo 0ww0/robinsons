@@ -1,0 +1,61 @@
+section.banner-carousel(data-slickjs='bannerCarousel')
+    .banner-item
+        .banner-item-image(style='background-image: url(../assets/images/pages/about-us/carousel/contact-landing.jpg);')
+        .container.cont-16
+            .banner-hero
+                table.banner-hero-middle
+                    tbody
+                        tr
+                            td
+                                .brand-hero-title.wide Contact Us
+
+section.site-section
+    .container.cont-16
+        .contact-heading--wrapper
+            .open-heading.txt-center Get in touch with us via phone or email. 
+
+            .contact-infogram-wrapper.clearfix
+                .contact-infogram-details
+                    strong Robinsons The Gardens Mall:
+                    span.contactNo 03 - 2089 1188
+                    a(href='mailto:info@robinsons.com.my') info@robinsons.com.my
+                .contact-infogram-details
+                    strong Robinsons Kuala Lumpur:
+                    span.contactNo 03 - 2382 7188
+                    a(href='mailto:robkl.cs@robinsons.com.my') robkl.cs@robinsons.com.my
+
+            .open-heading.txt-center You can also contact us via the form below.
+
+
+        .form-container
+            form.contact-form.clearfix#js-contact-form(novalidate = 'novalidate')
+                .form-col.left
+                    .form-group.show-error-wrapper
+                        label(for='store') Store
+                        .dropdown
+                            i.caret-dropdown.icon-dropdown
+                            select.dropdown-control
+                                option Robinsons Kuala Lumpur
+                                option Robinsons The Gardens
+                    .form-group.show-error-wrapper
+                        label(for='first-name') First Name
+                        input(type='text' class='form-control' name='first-name' id='first-name' placeholder='First Name')
+                    .form-group.show-error-wrapper
+                        label(for='first-name') Last Name
+                        input(type='text' class='form-control' name='last-name' id='last-name' placeholder='Last Name')
+                    .form-group.show-error-wrapper
+                        label(for='contact-number') Contact Number
+                        input(type='text' class='form-control' name='phone' id='phonee' placeholder='e.g. +601234567')
+                    .form-group.show-error-wrapper
+                        label(for='email') Email
+                        input(type='email' class='form-control' name='email' id='email' placeholder='e.g. abc@abc.com')
+                    .form-group.show-error-wrapper
+                        label(for='robinsons-card-number') Robinsons Card Number
+                        input(type='text' class='form-control' name='robinsons-card-number' id='robinsons-card-number' placeholder='e.g. 8820000012345678')
+                .form-col.right
+                    .form-group.show-error-wrapper
+                        label(for='enquiries') Enquiries
+                        textarea(class='form-control' row='5' id='enquiries' name='enquiries' placeholder='Enquiries')
+                .button-wrapper.txt-center
+                    button.button.submit(type='submit' value='submit')
+                        | Submit

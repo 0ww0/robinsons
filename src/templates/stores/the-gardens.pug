@@ -1,0 +1,19 @@
+extends ../include/defaults
+
+block config
+    - rootBase = '../'
+    - title = 'Store'
+    - breadcrumb = 'Robinsons The gardens Mid valley'
+    - pageClass = 'store'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    
+block javascript
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD17rxIfC9QZWnwGPoK9LlkkrNaM0SPX0M&callback=initMap', async, defer)
+    
+block content
+    include ../include/components/_breadcrumb
+    include ../include/partials/stores/_the-gardens

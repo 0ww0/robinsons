@@ -1,0 +1,490 @@
+@import "../include/mixins/vars";
+@import "../include/mixins/mixin";
+
+.gift-section{
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 1px #e3e3e3 solid;
+    .decoration-wrapper{
+        position: relative;
+        width: 100%;
+        height: 536px;
+        .deco-01{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include widthPercent(171, 1280);
+            @include responsive-ratio(171, 202);
+            max-width: 171px;
+            bottom: 0;
+        }
+        .deco-02{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include widthPercent(543, 1280);
+            @include responsive-ratio(543, 505);
+            max-width: 543px;
+            bottom: 0;
+            left: 6%;
+        }
+        .deco-03{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include widthPercent(484, 1280);
+            @include responsive-ratio(484, 139);
+            max-width: 484px;
+            bottom: 0;
+            right: 10%;
+        }
+    }
+}
+
+
+.deco-infogram{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 32%;
+    right: 0;
+    bottom: 0;
+    width: 495px;
+    height: 328px;
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 78px 35px;
+}
+
+.deco-title{
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+}
+
+.deco-subtitle{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-infogram{
+    position: relative;
+    display: block;
+    width: 95%;
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: -45px;
+}
+
+.contact-title{
+    width: 30%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 6px;
+    padding: 1% 4%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contact-details{
+    width: 70%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    border-left: 1px #ddd solid;
+    padding: 1% 4%;
+    padding-left: 5%;
+    a{
+        text-decoration: underline;
+        font-weight: bold;
+        word-break: break-word;
+        word-wrap: break-word;
+        /*-ms-word-break: break-word;*/
+    }
+}
+
+
+@include media(md-dn){
+    .deco-infogram{
+        left: 0;
+    }
+    .contact-title{
+        display: block;
+        width: 100%;
+        padding-bottom: 2%;
+    }
+    .contact-details{
+        text-align: center;
+        border-left: 0;
+        border-top: 1px #ddd solid;
+        display: block;
+        width: 100%;
+        padding-top: 2%;
+        padding-left: 1%;
+    }
+}
+
+@include media(sm-dn){
+    .gift-section{
+        .decoration-wrapper{
+            padding-top: 10%;
+            height: 450px;
+            .deco-01{
+                margin: auto;
+                left: 0;
+                right: 50%;
+            }
+            .deco-02{
+                margin: auto;
+                left: 0;
+                right: 0;
+            }
+            .deco-03{
+                display: none;
+            }
+        }
+    }
+    .deco-infogram{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 10% 35px;
+    }
+
+    .deco-title{
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .deco-subtitle{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+
+@include media(xs-dn){
+    .gift-section{
+        .decoration-wrapper{
+            .deco-01{
+                @include widthPercent(200, 1280);
+                @include responsive-ratio(171, 202);
+            }
+            .deco-02{
+                @include widthPercent(645, 1280);
+                @include responsive-ratio(543, 505);
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+/*---------------------------
+    Move Shopping Bag
+-----------------------------*/
+.move-bag-section{
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 1px #e3e3e3 solid;
+    .move-bag-wrapper{
+        position: relative;
+        width: 100%;
+        height: 536px;
+        .move-bag-02{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include widthPercent(495, 1280);
+            @include responsive-ratio(495, 505);
+            max-width: 495px;
+            bottom: 0;
+            left: 6%;
+        }
+    }
+}
+
+
+.move-bag-infogram{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 32%;
+    right: 0;
+    bottom: 0;
+    width: 495px;
+    height: 460px;
+    padding: 78px 35px;
+}
+.move-bag-title{
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.move-bag-subtitle{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+.move-bag-contact-no-wrapper {
+    border: 8px #ededed solid;
+    background-color: $white;
+    padding: 15px 10px;
+    text-align: center;
+}
+.move-bag-contact-info{
+    color: #646464;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 0 5px;
+}
+.move-bag-contact-no {
+    width: 49%;
+    display: inline-block;
+    font-size: 13px;
+
+    &:not(:first-child) {
+        border-left: 2px solid #ededed;
+    }
+
+    strong {
+        font-size: 20px;
+        display: block;
+    }
+}
+
+
+@include media(md-dn){
+    .move-bag-section{
+        .move-bag-wrapper{
+            padding: 10% 0;
+            // height: 600px;
+            height: auto;
+            // min-height: 600px;
+            .move-bag-02{
+                margin: 0 auto 20px;
+                left: 0;
+                right: 0;
+                position: relative;
+                @include widthPercent(800, 1280);
+                @include responsive-ratio(645, 700);
+            }
+        }
+    }
+    .move-bag-infogram{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0 35px;
+        left: 0;
+    }
+}
+
+@include media(sm-dn){
+    // .move-bag-section{
+    //     .move-bag-wrapper{
+    //         height: 570px;
+    //     }
+    // }
+
+    .move-bag-title{
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .move-bag-subtitle{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 505px) {
+    .move-bag-contact-no {
+        width: 100%;
+
+        &:not(:first-child) {
+            border-left: 0;
+            border-top: 2px solid #ededed;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@include media(xs-dn){
+    .move-bag-section{
+        .move-bag-wrapper{
+            .move-bag-02{
+                @include widthPercent(800, 1280);
+                @include responsive-ratio(495, 535);
+            }
+
+        }
+    }
+}
+
+
+
+
+
+/*---------------------------
+    Style Consultants
+-----------------------------*/
+.styleConsultants-section {
+    
+    .meetConsultant-infogram{
+        position: relative;
+        display: block;
+        width: 100%;
+        border: 8px #ededed solid;
+        background-color: $white;
+        padding: 20px;
+        margin-top: -45px;
+        text-align: center;
+    }
+
+    .meetConsultant-title {
+        font-size: 26px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: #020202;
+        margin-bottom: 5px;
+
+        @include media(sm-up) {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .meetConsultant-sub {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #1c1c1c;
+        margin-bottom: 20px;
+    }
+
+    .meetConsultant-tnc {
+        color: #252525;
+        font-size: 9px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .open-heading {
+        padding-bottom: 0;
+    }
+
+    .open-subheading {
+        font-size: 11px;
+    }
+    
+    .custom-radio-wrapper {
+        .custom-radio {
+            display: inline-block;
+
+            &:not(:first-child) {
+                padding-left: 30px;
+            }
+        }
+    }
+
+    .custom-checkbox-wrapper {
+        .custom-checkbox {
+            display: inline-block;
+            width: calc(50% - 25px);
+
+            @media (min-width: 641px) and (max-width: 990px) {
+                width: 100%;
+            }
+
+            @media (max-width: 420px) {
+                width: 100%;
+            }
+        }
+    }
+    
+    .form-container {
+        margin-top: 30px;
+    }
+    .form-group {
+        label {
+            font-size: 14px;
+        }
+
+        .input-wrapper input {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+
+        textarea {
+            height: auto;
+            max-height: inherit;
+        }
+
+        .calender-icon {
+            background-image: url(../../images/ui/icons/calender-icon.png);
+            background-position: 96% 50%;
+            background-size: 24px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .tnc-check > [type="checkbox"]:not(:checked) + label,
+    .tnc-check > [type="checkbox"]:checked + label {
+        font-size: 12px;
+    }
+
+    .thank-section {
+        text-align: center;
+        padding: 8% 0;
+
+        .title {
+            color: #020202;
+            font-size: 30px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .contentt {
+            font-family: 'Open Sans', sans-serif;
+            color: #1c1c1c;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .other-special {
+        [type="checkbox"]:not(:checked) + label,
+        [type="checkbox"]:checked + label {
+            width: 40%;
+            display: inline-block;
+            float: left;
+        }
+
+        .styleConsultants-others-input {
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            display: inline-block;
+            width: 60%;
+            height: 26px;
+            padding: 6px;
+            font-size: 14px;
+        }
+    }
+}

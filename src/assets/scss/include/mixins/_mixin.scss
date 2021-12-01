@@ -1,0 +1,68 @@
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: true) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+@mixin widthPercent($width, $contWidth){
+    width: #{($width/$contWidth)*100%};
+}
+
+@mixin media($media){
+    @if $media == xs-dn {
+        @media($max : $xs){ @content; }
+    }
+    @else if $media == xs-up {
+        @media($min : $xs + 1px) { @content; }
+    }
+    @else if $media == sm-dn {
+        @media($max : $sm) { @content; }
+    }
+    @else if $media == sm-up {
+        @media($min : $sm + 1px) { @content; }
+    }
+    @else if $media == md-dn {
+        @media($max : $md) { @content; }
+    }
+    @else if $media == md-up {
+        @media($min : $md + 1px) { @content; }
+    }
+    @else if $media == dp-dn {
+        @media($max : $dp) { @content; }
+    }
+    @else if $media == dp-up {
+        @media($min : $dp + 1px) { @content; }
+    }
+    @else if $media == xs-sm {
+        @media($max : $sm) and ($min : $xs) and (orientation: landscape) { @content; }
+    }
+    @else if $media == xs-md {
+        @media($max : $md) and ($min : $xs) and (orientation: landscape) { @content; }
+    }
+    @else if $media == xs-dp {
+        @media($max : $dp) and ($min : $xs) and (orientation: landscape) { @content; }
+    }
+    @else if $media == sm-md {
+        @media($max : $md) and ($min : $sm) and (orientation: landscape) { @content; }
+    }
+    @else if $media == sm-dp {
+        @media($max : $dp) and ($min : $sm) and (orientation: landscape) { @content; }
+    }
+    @else if $media == md-dp {
+        @media($max : $dp) and ($min : $md) and (orientation: landscape) { @content; }
+    }
+
+}

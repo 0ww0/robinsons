@@ -1,0 +1,178 @@
+/******************************************************************************
+                         NOTE: Grid System
+******************************************************************************/
+
+//Import
+@import "include/mixins/vars";
+@import "include/mixins/mixin";
+
+/* NOTE: Container */
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 40px;
+    &.cont-12{
+        max-width: 1000px;
+    }
+    &.cont-16{
+        max-width: 1200px;
+    }
+    &.fluid{
+        min-width: 100%;
+    }
+    &.xhdpi{
+    }
+    @include media(sm-dn){
+        padding: 0 20px;
+    }
+    @include media(xs-dn){
+        width: 90%;
+        padding: 0;
+    }
+}
+
+/* NOTE: Grid System 12 / 16 */
+
+//----- Extends
+%clearfix:after {
+    display: block;
+    clear: both;
+    content:'';
+}
+
+//----- Grid System
+$grid-spacing: 3%;
+
+.row {
+    @extend %clearfix;
+
+    & + & {
+        margin-top: $grid-spacing;
+    }
+}
+
+[class^="col-"] {
+    width: 100%;
+    float: left;
+    margin-right: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:last-child {
+        margin-right: 0%;
+    }
+}
+
+/* NOTE: Breakpoint 641px - Grid System Started */
+@include media(sm-up){
+    [class^="col-"] {
+        float: left;
+        margin-right: $grid-spacing;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &:last-child {
+            margin-right: 0%;
+        }
+    }
+
+    /* NOTE: Grid 12 System: Width: 960px */
+    .cont-12{
+
+        /* NOTE: Grid 12 */
+        .col-1   { width: (100% / 12) - ($grid-spacing * 11 / 12); }
+        .col-2   { width: (100% / 6) - ($grid-spacing * 10 / 12); }
+        .col-3   { width: (100% / 4) - ($grid-spacing * 9 / 12); }
+        .col-4   { width: (100% / 3) - ($grid-spacing * 8 / 12); }
+        .col-5   { width: (100% / 2.4) - ($grid-spacing * 7 / 12); }
+        .col-6   { width: (100% / 2) - ($grid-spacing * 6 / 12); }
+        .col-7   { width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12); }
+        .col-8   { width: (100% / 1.5) - ($grid-spacing * 4 / 12); }
+        .col-9   { width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12); }
+        .col-10  { width: (100% / 1.2) - ($grid-spacing * 2 / 12); }
+        .col-11  { width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12); }
+        .col-12  { width: 100%; }
+
+        /* NOTE: No Margin Right */
+        .col-one-third { width: (100% / 3); margin-right: 0; }
+        .col-two-third { width: (100% / 1.5); margin-right: 0; }
+        .col-half      { width: (100% / 2); margin-right: 0; }
+        .col-full      { width: 100%; }
+
+        /* NOTE: Offset Grid 12 */
+        .offset-1   { margin-left: (100% / 12); }
+        .offset-2   { margin-left: (100% / 6); }
+        .offset-3   { margin-left: (100% / 4); }
+        .offset-4   { margin-left: (100% / 3); }
+        .offset-5   { margin-left: (100% / 2.4); }
+        .offset-6   { margin-left: (100% / 2); }
+        .offset-7   { margin-left: (100% / 1.714285714285714); }
+        .offset-8   { margin-left: (100% / 1.5); }
+        .offset-9   { margin-left: (100% / 1.333333333333333); }
+        .offset-10  { margin-left: (100% / 1.2); }
+        .offset-11  { margin-left: (100% / 1.090909090909091); }
+        .offset-12  { margin-left: 0; }
+
+        /* NOTE: Offset No Margin Right */
+        .offset-one-third { margin-left: (100% / 3); margin-right: 0; }
+        .offset-two-third { margin-left: (100% / 1.5); margin-right: 0; }
+        .offset-half      { margin-left: (100% / 2); margin-right: 0; }
+        .offset-full      { margin-left: 0; }
+    }
+
+    /* NOTE: Grid 16 System: Width: 1200 */
+    .cont-16{
+
+        /* NOTE: Grid 16 */
+        .col-1   { width: (100% / 16) - ($grid-spacing * 15 / 16); }
+        .col-2   { width: (100% / 8) - ($grid-spacing * 14 / 16); }
+        .col-3   { width: (100% / 5.333333333333333) - ($grid-spacing * 13 / 16); }
+        .col-4   { width: (100% / 4) - ($grid-spacing * 12 / 16); }
+        .col-5   { width: (100% / 3.2) - ($grid-spacing * 11 / 16); }
+        .col-6   { width: (100% / 2.666666666666667) - ($grid-spacing * 10 / 16); }
+        .col-7   { width: (100% / 2.285714285714286) - ($grid-spacing * 9 / 16); }
+        .col-8   { width: (100% / 2) - ($grid-spacing * 8 / 16); }
+        .col-9   { width: (100% / 1.777777777777778) - ($grid-spacing * 7 / 16); }
+        .col-10  { width: (100% / 1.6) - ($grid-spacing * 6 / 16); }
+        .col-11  { width: (100% / 1.454545454545455) - ($grid-spacing * 5 / 16); }
+        .col-12  { width: (100% / 1.333333333333333) - ($grid-spacing * 4 / 16); }
+        .col-13  { width: (100% / 1.230769230769231) - ($grid-spacing * 3 / 16); }
+        .col-14  { width: (100% / 1.142857142857143) - ($grid-spacing * 2 / 16); }
+        .col-15  { width: (100% / 1.066666666666667) - ($grid-spacing * 1 / 16); }
+        .col-16  { width: 100%; }
+
+        /* NOTE: No Margin Right */
+        .col-one-third { width: (100% / 3); margin-right: 0; }
+        .col-two-third { width: (100% / 1.5); margin-right: 0; }
+        .col-half      { width: (100% / 2); margin-right: 0; }
+        .col-full      { width: 100%; }
+
+        /* NOTE: Offset Grid 16 */
+        .offset-1   { margin-left: (100% / 16); }
+        .offset-2   { margin-left: (100% / 8); }
+        .offset-3   { margin-left: (100% / 5.333333333333333); }
+        .offset-4   { margin-left: (100% / 4); }
+        .offset-5   { margin-left: (100% / 3.2); }
+        .offset-6   { margin-left: (100% / 2.666666666666667); }
+        .offset-7   { margin-left: (100% / 2.285714285714286); }
+        .offset-8   { margin-left: (100% / 2); }
+        .offset-9   { margin-left: (100% / 1.777777777777778); }
+        .offset-10  { margin-left: (100% / 1.6); }
+        .offset-11  { margin-left: (100% / 1.454545454545455); }
+        .offset-12  { margin-left: (100% / 1.333333333333333); }
+        .offset-13  { margin-left: (100% / 1.230769230769231); }
+        .offset-14  { margin-left: (100% / 1.142857142857143); }
+        .offset-15  { margin-left: (100% / 1.066666666666667); }
+        .offset-16  { margin-left: 0; }
+
+        /* NOTE: Offset No Margin Right */
+        .offset-one-third { margin-left: (100% / 3); margin-right: 0; }
+        .offset-two-third { margin-left: (100% / 1.5); margin-right: 0; }
+        .offset-half      { margin-left: (100% / 2); margin-right: 0; }
+        .offset-full      { margin-left: 0; }
+    }
+}

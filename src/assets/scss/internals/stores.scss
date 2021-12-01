@@ -1,0 +1,77 @@
+@import "../include/mixins/vars";
+@import "../include/mixins/mixin";
+
+
+.carousel-singapore{
+    background-image: url(../../images/pages/store/carousel/singapore-landing.jpg);
+
+    @include media(sm-dn) {
+        background-image: url(../../images/pages/store/carousel/singapore-landing-mobile.jpg);
+    }
+
+    .stores-box-global{
+        &.heeren{
+            height: 295px;
+            min-height: 295px;
+
+            @include media(md-dn) {
+                height: 295px;
+                min-height: 295px;
+            }
+            @include media(sm-dn) {
+                height: auto;
+                min-height: auto;
+            }
+        }
+        &.jem{
+            height: 280px;
+            min-height: 280px;
+
+            @include media(md-dn) {
+                height: 275px;
+                min-height: 275px;
+            }
+            @include media(sm-dn) {
+                height: auto;
+                min-height: auto;
+            }
+        }
+        &.raffles-city{
+            height: 310px;
+            min-height: 310px;
+
+            @include media(md-dn) {
+                height: 310px;
+                min-height: 310px;
+            }
+            @include media(sm-dn) {
+                height: auto;
+                min-height: auto;
+            }
+        }
+    }
+}
+
+.carousel-dubai{
+    background-image: url(../../images/pages/store/carousel/dubai-landing.jpg);
+
+    @include media(sm-dn) {
+        background-image: url(../../images/pages/store/carousel/dubai-landing-mobile.jpg);
+    }
+
+    .stores-box-global {
+        .dubai {
+            height: 345px;
+            min-height: 345px;
+
+            @include media(md-dn) {
+                height: 345px;
+                min-height: 345px;
+            }
+            @include media(sm-dn) {
+                height: auto;
+                min-height: auto;
+            }
+        }
+    }
+}

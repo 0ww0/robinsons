@@ -1,0 +1,15 @@
+section.breadcrumb
+    .container.cont-16
+        .breadcrumb-wrapper
+            if (breadcrumb !== '')
+                a.bread-link(href='#/') Home
+                span &gt;
+                a.bread-link(href='#/') #{title}
+                span &gt;
+                a.bread-link.here(href='#/') #{breadcrumb}
+            else
+                a.bread-link(href='#/') Home
+                span &gt;
+                a.bread-link.here(href='#/') #{title}
+            
+            

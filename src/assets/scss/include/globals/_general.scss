@@ -1,0 +1,296 @@
+/******************************************************************************
+                            General CSS styling
+                            NOTE: Share/All Styling
+                            Overide Common CSS
+*******************************************************************************/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: $century-gothic;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    font: 100%/1.5 $century-gothic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: 700 1.25em/1.2 $century-gothic;
+}
+
+label {
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+
+span{
+    color: $span;
+}
+
+p{
+    color: $para;
+}
+
+img {
+    max-width: 100%;
+}
+
+main{
+    padding-top: 130px;
+    @include media(md-dn) {
+        padding-top: 75px;
+    }
+    @include media(sm-dn) {
+        padding-top: 75px;
+    }
+    @include media(xs-dn) {
+        padding-top: 50px;
+    }
+}
+
+
+//- bg-hack
+
+.bg-op{
+    background-color: $black;
+    opacity: 0.6;
+}
+
+.sr-only{
+    font-size: 0;
+    display: none;
+}
+
+//- float
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.noscroll{
+    overflow: hidden;
+    height: 100%;
+}
+
+//- text
+
+.txt-left{
+    text-align: left;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+.txt-justify{
+    text-align: justify;
+}
+
+.txt-uppercase{
+    text-transform: uppercase;
+}
+
+.txt-lowercase{
+    text-transform: lowercase;
+}
+
+.txt-capitalize{
+    text-transform: capitalize;
+}
+
+.txt-line-throught{
+    text-decoration: line-through;
+}
+
+.txt-overline{
+    text-decoration: overline;
+}
+
+.txt-underline{
+    text-decoration: underline;
+}
+
+.font-italic{
+    font-style: italic;
+}
+
+.font-oblique{
+    font-style: oblique;
+}
+
+.site-section{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+@include media(md-dn){
+    .site-section{
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+@include media(sm-dn){
+    .site-section{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+
+.bottom-line{
+    border-bottom: 1px #e3e3e3 solid;
+}
+
+.heading{
+    display: block;
+    padding: 25px 0;
+}
+
+.heading-title{
+    font-size: 26px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.heading-subtitle{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+@include media(xs-dn){
+    .heading-title{
+        font-size: 22px;
+    }
+
+    .heading-subtitle{
+        font-size: 10px;
+    }
+}
+
+
+//Contact
+
+.open-wrapper{
+    position: relative;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #646464;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+
+.open-heading{
+    font-size: 25px;
+    padding-bottom: 25px;
+    a{
+        text-decoration: underline;
+    }
+}
+
+.open-subheading{
+    font-size: 16px;
+}
+
+@include media(md-dn){
+    .open-wrapper{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .open-heading{
+        font-size: 20px;
+    }
+
+}
+
+@include media(sm-dn){
+    .open-heading{
+        font-size: 18px;
+    }
+    .open-subheading{
+        font-size: 15px;
+    }
+}
+
+
+.bg-smoke-white{
+    background-color: #ededed;
+}
+
+
+
+#isDesktop{
+    display: block;
+}
+#isMobile{
+    display: none;
+}
+
+@include media(md-dn){
+    #isDesktop{
+        display: none;
+    }
+    #isMobile{
+        display: block;
+    }
+}

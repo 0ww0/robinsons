@@ -1,0 +1,78 @@
+section.site-section.offers-event.whats-happening.clearfix(data-row-equaliser='.offers-col')
+    .container.cont-16
+        .whats-happening-details
+            .offers-col.vertical-middle
+                .offers-heading What’s Happening
+                .offers-subheading Get the lowdown on the latest sales, offers, new launches and more at Robinsons Malaysia.
+                .dropdown
+                    i.caret-dropdown.icon-dropdown
+                    select.dropdown-control
+                        option March 2018
+        .whats-happening-carousel
+            .offers-col.offers-carousel(data-slickjs='offersCarousel' data-row-equaliser='.offers-holder')
+                .offers-item
+                    .offers-table
+                        .offers-holder.vertical-middle
+                            .offers-infogram
+                                .offers-logo-holder
+                                    img(src= imgPath + 'ui/offers-logo.png')
+                                a(href='#/' data-popup-open-slider='popup-1')
+                                    .offers-images-holder
+                                        img(src= imgPath + 'pages/event/img-01.jpg')
+
+                .offers-item
+                    .offers-table
+                        .offers-holder.vertical-middle
+                            .offers-infogram
+                                .offers-logo-holder
+                                    img(src= imgPath + 'ui/offers-logo.png')
+                                a(href='#/' data-popup-open-slider='popup-1')
+                                    .offers-images-holder
+                                        img(src= imgPath + 'pages/event/img-01.jpg')
+                .offers-item
+                    .offers-table
+                        .offers-holder.vertical-middle
+                            .offers-infogram
+                                .offers-logo-holder
+                                    img(src= imgPath + 'ui/offers-logo.png')
+                                a(href='#/' data-popup-open-slider='popup-2')
+                                    .offers-images-holder
+                                        img(src= imgPath + 'pages/event/img-02.jpg')
+                .offers-item
+                    .offers-table
+                        .offers-holder.vertical-middle
+                            .offers-infogram
+                                .offers-logo-holder
+                                    img(src= imgPath + 'ui/offers-logo.png')
+                                a(href='#/' data-popup-open-slider='popup-2')
+                                    .offers-images-holder
+                                        img(src= imgPath + 'pages/event/img-02.jpg')
+                .offers-item
+                    .offers-table
+                        .offers-holder.vertical-middle
+                            .offers-infogram
+                                .offers-logo-holder
+                                    img(src= imgPath + 'ui/offers-logo.png')
+                                .offers-images-holder
+                                    img(src= imgPath + 'pages/event/img-01.jpg')
+            .offers-dots
+
+section.popup-section
+    .offers-popup.popup(data-popup='popup-1')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .offers-logo-holder
+                        img(src= imgPath + 'ui/offers-logo.png')
+                    .offers-images-holder
+                        img(src= imgPath + 'pages/event/may1.jpg')
+                    a.popup-close.icon-close(data-popup-close='popup-1' href='#/')
+    .offers-popup.popup(data-popup='popup-2')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .offers-logo-holder
+                        img(src= imgPath + 'ui/offers-logo.png')
+                    .offers-images-holder
+                        img(src= imgPath + 'pages/event/img-02.jpg')
+                    a.popup-close.icon-close(data-popup-close='popup-2' href='#/')

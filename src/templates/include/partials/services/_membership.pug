@@ -1,0 +1,83 @@
+section.banner-carousel(data-slickjs='bannerCarousel')
+    .banner-item
+        .banner-item-image(style='background-image: url(../assets/images/pages/service/carousel/membership-landing.jpg);')
+        .container.cont-16
+            .banner-hero
+                table.banner-hero-middle
+                    tbody
+                        tr
+                            td
+                                .brand-hero-title THE ROBINSONS MEMBER CARD
+                                .brand-hero-subtitle Earn up to 10% rebates and stay up-to-date with us on our exclusive card members’ promotions and events!
+                                // a.button.white(href='#/'  data-popup-open='membership') Apply Now
+                
+section.site-section
+    .container.cont-16
+        .heading
+            .heading-title.txt-center PRIVILEGES
+        .articles-wrapper.clearfix(data-row-equaliser='.articles-title')
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/privilage/img-01.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center ENJOY 5% REBATE QUARTERLY
+                    .articles-submain
+                        | All qualifying net purchases (excluding GST) made between January to March, April to June, July to September, October to December entitle each Cardholder to a rebate of 5%.
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/privilage/img-02.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center ENJOY UP TO 10% REBATE EVERY HALF YEARLY
+                    .articles-submain
+                        | Cardmember spend in excess of RM6,000 (excluding GST) in the qualifying periods of January to June and July to December, all subsequent ringgit spent RM6,000 will eligible for additional 5% rebates
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/privilage/img-03.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center CROSS BORDER PRIVILEGES
+                    .articles-submain
+                        | Enjoy 5% discount* on your purchases when you shop at Robinsons store in Singapore untill 31st December 2018. Not applicable on Black Friday weekend events, purchases of Robinsons Gift Card(s) and Al-Futtaim Retail Group voucher(s).
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/privilage/img-04.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center PRIVILEGES AT PARTICIPATING MERCHANTS
+                    .articles-submain
+                        | Enjoy discounts and other privileges at our participating merchants. Click #[a(href='#/') here] to find out our participating merchants list. 
+            .articles-content
+                .articles-image-holder
+                    img(src= imgPath + 'pages/article/privilage/img-05.jpg')
+                .articles-post
+                    .articles-title.vertical-middle.txt-center EXCLUSIVE INVITATION TO EVENTS AND PROMOTIONS
+                    .articles-submain
+                        | Keep your contact updated so we can get in touch with you on all our exclusive promotions and close door events.
+
+section.popup-section
+    .membership-popup.popup.clearfix(data-popup='membership')
+        .popup-table
+            .popup-table-cell
+                .popup-inner
+                    .membership-logo-holder.txt-center
+                        img(src= imgPath + 'ui/logo-small-transparent.png')
+                    .membership-holder.txt-center
+                        .membership-title MEMBERSHIP APPLICATION
+                        .membership-perk Earn up to 10% rebates and enjoy additional perks at our partner merchants!
+                        form.membership-form#js-membership-form(novalidate = 'novalidate')
+                            .form-group.show-error-wrapper
+                                input(type='text' class='form-control' name='name' id='name' placeholder='Your Name')
+                            .form-group.show-error-wrapper
+                                input(type='text' class='form-control' name='nric-passport' id='nric-pasport' placeholder='NRIC / Passport No.')
+                            .form-group.show-error-wrapper
+                                input(type='text' class='form-control' name='phone' id='phone' placeholder='Contact Number')
+                            .form-group.show-error-wrapper
+                                input(type='text' class='form-control' name='email' id='email' placeholder='Email')
+                            .form-group.show-error-wrapper.txt-center
+                                input(type='checkbox' name='tnc' value='tnc') 
+                                span.text-checkbox
+                                    | I have read and agree to the
+                                    | #[a(href='#/') Terms & Conditions]
+                                    | of this service.
+                            .form-group.txt-center
+                                button.button.submit(type='submit' value='submit')
+                                    | Submit
+                    a.popup-close.icon-close(data-popup-close='membership' href='#/')

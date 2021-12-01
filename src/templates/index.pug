@@ -1,0 +1,18 @@
+extends include/defaults
+
+block config
+    - rootBase = ''
+    - title = 'Home'
+    - breadcrumb = ''
+    - pageClass = 'home'
+    - imgPath = rootBase + 'assets/images/'
+    - cssPath = rootBase + 'assets/css/internal/'
+    - jsPath  = rootBase + 'assets/js/'
+
+block stylesheet
+    link(rel='stylesheet', href = rootBase + 'assets/css/internals/home.min.css')
+        
+block javascript
+
+block content
+    include include/partials/_index
